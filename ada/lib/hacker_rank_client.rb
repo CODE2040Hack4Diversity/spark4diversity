@@ -5,13 +5,13 @@ class HackerRankClient
   def initialize()
   end
 
-  def submit_code(source, test)
+  def submit_code(source, language_number, test)
     request = Typhoeus::Request.new(
         URL,
         method: :post,
         body: {
           source: source,
-          lang: 5,
+          lang: language_number,
           testcases: test,
           api_key: API_KEY
         }

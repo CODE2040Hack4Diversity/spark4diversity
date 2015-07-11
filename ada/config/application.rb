@@ -22,5 +22,6 @@ module Ada
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    API_KEY = "hackerrank|258009-281|b2f5f21b0e34585da262983af2119a651bb26419"
   end
 end

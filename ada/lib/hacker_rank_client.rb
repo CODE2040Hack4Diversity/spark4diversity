@@ -17,22 +17,26 @@ class HackerRankClient
         }
       )
 
+
     request.on_complete do |response|
       if response.success?
-        p response
-        # hell yeah
+        result = JSON.parse(response.body)
+        pp result
+        # pp result['result']['message']
+
       elsif response.timed_out?
+        # p response
         p response
-        # aw hell no
-        #log("got a time out")
+        result = JSON.parse(response.body)
+        pp result['result']['message']
       elsif response.code == 0
-        p response
-        # Could not get an http response, something's wrong.
-        #log(response.return_message)
+        # p response
+        result = JSON.parse(response.body)
+        pp result['result']['message']
       else
-        p response
-        # Received a non-successful http response.
-        #log("HTTP request failed: " + response.code.to_s)
+        # p response
+        result = JSON.parse(response.body)
+        pp result['result']['message']
       end
     end
     request.run

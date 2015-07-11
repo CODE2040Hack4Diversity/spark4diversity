@@ -1,3 +1,39 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'bootstrap';
+
+.form-control {
+  position: relative;
+  width:50%;
+  left: 25%;
+}
+
+
+.page_title {
+  position: relative;
+  text-align: center;
+  font-family: verdana;
+  letter-spacing: 5px;
+  padding: 10px;
+}
+.page-header {
+  position: relative;
+  left: 25%;
+  width: 50%;
+}
+
+
+.btn {
+  position: relative;
+  margin-top: 20px;
+  left: 47%;
+  .btn-success {
+
+  }
+}
+
+.what {
+  position: relative;
+  left: 48.5%;
+}

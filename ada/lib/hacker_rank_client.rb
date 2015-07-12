@@ -21,9 +21,18 @@ class HackerRankClient
     request.on_complete do |response|
       if response.success?
         result = JSON.parse(response.body)
-        pp result
-        # pp result['result']['message']
+        #pp result
+        pp result['result']['stdout'][0]
+        if result['result']['compilemessage'] == ""
+          if test == result['result']['stdout'][0]
+            jsonmessage = { :message => "Successful" }.to_json
+          else 
+            jsonmessage = { :message => "Unsuccessful" }.to_json
+          end 
+        else
+            jsonmessage = {:message => result['result']['compilemessage']}.to_json
 
+        end
       elsif response.timed_out?
         result = JSON.parse(response.body)
         pp result['result']['message']

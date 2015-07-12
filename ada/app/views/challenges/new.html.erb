@@ -1,15 +1,21 @@
-<%= form_for @challenge do |f| %>
-	<div class="title">
-		<%= f.label :title %>
-		<%= f.text_field :title %>
-	</div>
-	<div class="description">
-		<%= f.label :description %>
-		<%= f.text_field :description %>
-	</div>
-	<div class="description">
-		<%= f.label :language %>
-		<%= f.text_field :language %>
-	</div>
 
+<%= form_for @challenge do |f| %>
+	<div class="jumbotron">
+		<h2 align ='middle'>New Challenge </h2>
+		<div class="title">
+			<%= f.label :title, class: "label-name" %>
+			<%= f.text_field :title, class: 'form-control'  %>
+		</div>
+		<div class="description">
+			<%= f.label :description, class: "label-name" %>
+			<%= f.text_area :description, size: "60x10", class: 'form-control' %>
+		</div>
+		<div class="language">
+			<%= f.label :language, class: "label-name" %>
+			<%= f.text_field :language, class: "form-control"  %>
+		</div>
+		<div>
+			<%= f.submit "Create Challenge", class: "btn btn-primary" %>
+		</div>
+	</div>
 <% end %>

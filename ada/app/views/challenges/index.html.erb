@@ -1,1 +1,10 @@
-<h1>Challenges</h1>
+<h1>Ada</h1>
+<h3>Welcome to your future.</h3>
+
+<% @challenges.each do |challenge| %>
+	<div class="opening" >
+		<h3><%= challenge.title %></h3>
+		<p><%= challenge.description %></p>
+		<p><%= challenge.language %></p>
+	</div>
+<% end %>

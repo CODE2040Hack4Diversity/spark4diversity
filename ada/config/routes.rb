@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get 'users/show'
 
-  devise_for :users
+  devise_for :users do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+    get '/users/sign_in'=> 'devise/sessions#new'
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -9,6 +12,9 @@ Rails.application.routes.draw do
   root 'challenges#index'
 
   resources :challenges
+
+  get '/users/:id', to: 'users#show', as: "user"
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

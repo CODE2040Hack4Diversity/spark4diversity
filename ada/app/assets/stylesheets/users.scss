@@ -10,12 +10,18 @@
 }
 
 
+.signup {
+  position:relative;
+  margin-top: -20px;
+}
+
 .page_title {
   position: relative;
+  padding-top: 20px;
   text-align: center;
   font-family: verdana;
   letter-spacing: 5px;
-  padding: 10px;
+
 }
 .page-header {
   position: relative;
@@ -37,3 +43,4 @@
   position: relative;
   left: 47%;
 }
+

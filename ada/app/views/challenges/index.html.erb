@@ -1,10 +1,17 @@
-<h1>Ada</h1>
-<h3>Welcome to your future.</h3>
+<div class="container">
+	<h1>Ada</h1>
+	<h3>Welcome to your future.</h3>
 
-<% @challenges.each do |challenge| %>
-	<div class="opening" >
-		<h3><%= challenge.title %></h3>
-		<p><%= challenge.description %></p>
-		<p><%= challenge.language %></p>
+	<div class="search-bar">
+		<input type="text" width="20" class="form-control">
+		<%= link_to "New Challenge", new_challenge_path, class: "btn btn-success" %>
 	</div>
-<% end %>
+
+	<% @challenges.each do |challenge| %>
+		<div class="opening" >
+			<h3><%= link_to challenge.title, challenge %></h3>
+			<p><%= challenge.description %></p>
+			<p><%= challenge.language %></p>
+		</div>
+	<% end %>
+</div>

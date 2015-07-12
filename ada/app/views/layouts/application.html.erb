@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ada</title>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -16,7 +16,7 @@
 	<div class="top-bar-middle">
 	</div>
     <% if user_signed_in? %>
-		<div class="container">		
+		<div class="container">
 			<ul class="nav nav-tabs">
               <li role="presentation"> <%=link_to "Profile", current_user %> </li>
 			  <li role="presentation"> <%= link_to "Home", root_url %></li>

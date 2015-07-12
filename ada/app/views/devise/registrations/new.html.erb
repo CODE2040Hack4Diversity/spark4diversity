@@ -4,23 +4,23 @@
       <h2 class="page_title">Sign Up</h2>
 
       <div class="field">
-        <%= f.label "Full Name", class: "page-header"%><br/>
+        <%= f.label "Full Name", class: "page-header", style: "color: white; font-size: 18px;"%><br/>
         <%= f.text_field :name, autofocus: true, class: "form-control" %>
       </div>
       <div class="field">
-        <%= f.label :email, class: "page-header"%><br/>
+        <%= f.label :email, class: "page-header", style: "color: white; font-size: 18px;"%><br/>
         <%= f.email_field :email, autofocus: true, class: "form-control" %>
       </div>
 
       <div class="field">
-        <%= f.label :password, class: "page-header" %>
+        <%= f.label :password, class: "page-header", style: "color: white; font-size: 18px;" %>
         <% if @validatable %>
         <% end %><br />
         <%= f.password_field :password, autocomplete: "off", class: "form-control"%>
       </div>
 
       <div class="field">
-        <%= f.label :password_confirmation, class: "page-header"%><br />
+        <%= f.label :password_confirmation, class: "page-header", style: "color: white; font-size: 18px;"%><br />
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control"%>
       </div>
 

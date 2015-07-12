@@ -4,12 +4,12 @@
 
 
     <div class="field">
-      <%= f.label :email, class: "page-header"%><br/>
+      <%= f.label :email, class: "page-header", style: "color: white; font-size: 18px;"%><br/>
       <%= f.email_field :email, autofocus: true, class: "form-control" %>
     </div>
 
     <div class="field">
-      <%= f.label :password, class: "page-header" %>
+      <%= f.label :password, class: "page-header", style: "color: white; font-size: 18px;" %>
       <% if @validatable %>
       <% end %><br />
       <%= f.password_field :password, autocomplete: "off", class: "form-control"%>

@@ -1,4 +1,5 @@
 class ChallengesController < ApplicationController
+   before_filter :authenticate_user!
 
 	def index
 		@challenges = Challenge.all

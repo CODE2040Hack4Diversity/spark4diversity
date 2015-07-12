@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+
+@import 'bootstrap';
+
+.nav.nav-tabs {
+	position: relative;
+	float: right;
+	padding-top: 10px;
+}
+
+.navbar-brand {
+	position: relative;
+	font-size: 26px;
+}
+
+.search-bar {
+	position: relative;
+	padding-top: 30px;	
+	right: 15%;
+}
+
+.search {
+	position: relative;
+	display: inl
+}

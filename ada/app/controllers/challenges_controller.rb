@@ -26,7 +26,7 @@ class ChallengesController < ApplicationController
 		client = HackerRankClient.new
     	response = client.submit_code(params[:challenge]["body"], "5", '["4"]')
 
-    	pp response
+    	pp response.handled_response[:message]
 		redirect_to root_url
 	end
 

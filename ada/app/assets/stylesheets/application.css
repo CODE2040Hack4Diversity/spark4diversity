@@ -38,3 +38,25 @@
 	position: relative;
 	display: inl
 }
+
+.icon {
+	float:left;
+}
+
+.top-bar-right {
+	float: right;
+}
+
+.top-bar-middle {
+	overflow: hidden;
+	background-color: #202020;
+	height: 100px;
+}
+
+
+
+
+
+
+
+

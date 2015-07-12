@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20150712024932) do
     t.string   "title"
     t.integer  "user_id"
     t.string   "answer"
+    t.string   "name"
   end
 
   add_index "challenges", ["user_id"], name: "index_challenges_on_user_id"

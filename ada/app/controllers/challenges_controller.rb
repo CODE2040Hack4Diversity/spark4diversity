@@ -23,12 +23,8 @@ class ChallengesController < ApplicationController
 	end
 
 	def update
-		#client = HackerRankClient.new
-		pp "HEYYYYYYYY"
-		debug(params)
-		pp :body
-		#response = client.submit_code(Challenge.find(params[:id]).body, 5, '["1"]')
-		#pp response
+		client = HackerRankClient.new
+		response = client.submit_code(Challenge.find(params[:id]).body, 5, '["1"]')
 	  	redirect_to show
 	end
 

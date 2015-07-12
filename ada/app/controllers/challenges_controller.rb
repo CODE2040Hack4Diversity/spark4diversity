@@ -1,3 +1,4 @@
+require 'hacker_rank_client'
 class ChallengesController < ApplicationController
    before_filter :authenticate_user!
 
@@ -21,8 +22,18 @@ class ChallengesController < ApplicationController
 		@challenge = Challenge.new
 	end
 
+	def update
+		#client = HackerRankClient.new
+		pp "HEYYYYYYYY"
+		debug(params)
+		pp :body
+		#response = client.submit_code(Challenge.find(params[:id]).body, 5, '["1"]')
+		#pp response
+	  	redirect_to show
+	end
+
 	private
 	def challenge_params
-		params.require(:challenge).permit(:user_id, :title, :body, :language, :description)
+		params.require(:challenge).permit(:user_id, :title, :body, :language, :description, :answer)
 	end
 end

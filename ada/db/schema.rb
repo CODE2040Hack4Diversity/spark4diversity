@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20150712024932) do
     t.string   "language"
     t.string   "title"
     t.integer  "user_id"
+    t.string   "name"
     t.string   "answer"
   end
 

@@ -7,11 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	
+
     <% if user_signed_in? %>
 		<div class="container">
 			<a href="#" class="navbar-brand"> <strong> ada </strong> </a>
-		
+
 			<ul class="nav nav-tabs">
 			  <li role="presentation"> <%= link_to "Home", root_url %></li>
 			  <li role="presentation"> <%= link_to "Account", edit_user_registration_path %></li>

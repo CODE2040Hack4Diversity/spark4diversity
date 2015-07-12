@@ -26,9 +26,9 @@ class HackerRankClient
         if result['result']['compilemessage'] == ""
           if test == result['result']['stdout'][0]
             jsonmessage = { :message => "Successful" }.to_json
-          else 
+          else
             jsonmessage = { :message => "Unsuccessful" }.to_json
-          end 
+          end
         else
             jsonmessage = {:message => result['result']['compilemessage']}.to_json
 

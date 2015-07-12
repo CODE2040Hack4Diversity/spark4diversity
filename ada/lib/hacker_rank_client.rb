@@ -25,16 +25,12 @@ class HackerRankClient
         # pp result['result']['message']
 
       elsif response.timed_out?
-        # p response
-        p response
         result = JSON.parse(response.body)
         pp result['result']['message']
       elsif response.code == 0
-        # p response
         result = JSON.parse(response.body)
         pp result['result']['message']
       else
-        # p response
         result = JSON.parse(response.body)
         pp result['result']['message']
       end

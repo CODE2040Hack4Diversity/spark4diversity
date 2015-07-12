@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 20150712024932) do
     t.integer  "user_id"
     t.string   "name"
     t.string   "answer"
-
   end
 
   add_index "challenges", ["user_id"], name: "index_challenges_on_user_id"

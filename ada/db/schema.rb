@@ -13,7 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150712024932) do
 
-
   create_table "challenges", force: :cascade do |t|
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

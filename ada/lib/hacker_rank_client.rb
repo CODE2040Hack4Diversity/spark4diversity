@@ -23,7 +23,9 @@ class HackerRankClient
       if response.success?
         result = JSON.parse(response.body)
         if result['result']['compilemessage'] == ""
-          if test == result['result']['stdout'][0]
+          testArr = JSON.parse(test)
+
+          if testArr[0] == result['result']['stdout'][0]
             jsonmessage = { :message => "Successful" }
           else
             jsonmessage = { :message => "Failure" }

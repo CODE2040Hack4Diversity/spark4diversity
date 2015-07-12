@@ -1,13 +1,18 @@
+<title> <%=@challenge.title %></title>
+
 <div class="challenge-header">
 	<h1 align ='middle'><%= @challenge.title %></h1>
+    <h4 align="middle"><%= link_to "#{@challenge.user.name}", @challenge.user%> </h4>
+    <p align="middle"><%= @challenge.description %> <strong><%=@challenge.language  %></strong></p>
 </div>
-	<%= form_for @challenge do |c| %>
-		<div>
-			<%= c.label @challenge.description, class: "label-name" %>
-			<%= c.text_area :body, size:"60x20", class: "form-control"  %>
-		</div>
+    <% if @challenge.body.nil? %>
+        <%= form_for @challenge do |c| %>
+            <div>
+                <%= c.text_area :body, size:"60x20", class: "form-control"  %>
+            </div>
 
-		<div>
-			<%= c.submit "Submit!", class: "btn btn-primary" %>
-		</div>
-	<% end %>
+            <div>
+                <%= c.submit "Submit!", class: "btn btn-primary", style: "position:relative; margin-bottom: 30px;" %>
+            </div>
+        <% end %>
+    <% end %>

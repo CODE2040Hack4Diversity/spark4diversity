@@ -44,7 +44,6 @@ body {
 
 .search {
 	position: relative;
-	display: inl
 }
 
 .icon {
@@ -61,7 +60,9 @@ body {
 	height: 100px;
 }
 
-
+.edit-user {
+	padding-left: 50px;
+}
 
 
 

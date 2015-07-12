@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ada</title>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 	<div class="icon">
-		<a href="http://localhost:3000/#">
-			<img src="/ada_logo.png" height="100" width="238.6" />
-		</a>
+		<%= link_to image_tag("/ada_logo.png", size: "238x100"), root_url %>
 	</div>
 	<div class="top-bar-right">
 		<img src="/top_bar_right2.png" height="100" width="279.25"/>
@@ -18,16 +16,16 @@
 	<div class="top-bar-middle">
 	</div>
     <% if user_signed_in? %>
-		<div class="container">		
+		<div class="container">
 			<ul class="nav nav-tabs">
+              <li role="presentation"> <%=link_to "Profile", current_user %> </li>
 			  <li role="presentation"> <%= link_to "Home", root_url %></li>
 			  <li role="presentation"> <%= link_to "Account", edit_user_registration_path %></li>
-			  <li role="presentation"> <%= link_to "Sign Out", destroy_user_session_path %>
+			  <li role="presentation"> <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 			  </li>
 			</ul>
 	    </div>
-
-	    <% end %>
+    <% end %>
 
 <%= yield %>
 

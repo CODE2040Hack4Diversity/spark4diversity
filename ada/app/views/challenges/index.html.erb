@@ -1,6 +1,12 @@
 <div class="container">
+
     <div class="search-bar">
 		<%= link_to "New Challenge", new_challenge_path, class: "btn btn-success" %>
+	<h3>Welcome to your future.</h3></div>
+
+	<div class="search-bar">
+		<input type="text" width="20" class="form-control" id="challenge-search">
+		<%= link_to "New Challenge", new_challenge_path, class: "btn btn-success"%>
 	</div>
     <hr>
 	<% @challenges.each do |challenge| %>

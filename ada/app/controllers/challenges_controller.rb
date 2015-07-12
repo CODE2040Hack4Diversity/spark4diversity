@@ -31,7 +31,7 @@ class ChallengesController < ApplicationController
 
 	def update
 		client = HackerRankClient.new
-    	response = client.submit_code(params[:challenge]["body"], "5", '["4"]')
+    	response = client.submit_code(params[:challenge]["body"], "5", '["144\n"]')
 
     	pp response.handled_response[:message]
 		redirect_to root_url

@@ -3,7 +3,7 @@ class ChallengesController < ApplicationController
    before_filter :authenticate_user!
 
 	def index
-		@challenges = Challenge.all
+		@challenges = Challenge.all.reverse_order()
 	end
 
 	def create
@@ -20,6 +20,13 @@ class ChallengesController < ApplicationController
 
 	def new
 		@challenge = Challenge.new
+	end
+
+
+	def destroy
+		@challenge = Challenge.find(params[:id])
+		@challenge.destroy
+		redirect_to root_url
 	end
 
 	def update

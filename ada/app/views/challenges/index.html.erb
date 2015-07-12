@@ -2,8 +2,8 @@
 	<h3>Welcome to your future.</h3>
 
 	<div class="search-bar">
-		<input type="text" width="20" class="form-control">
-		<%= link_to "New Challenge", new_challenge_path, class: "btn btn-success" %>
+		<input type="text" width="20" class="form-control" id="challenge-search">
+		<%= link_to "New Challenge", new_challenge_path, class: "btn btn-success"%>
 	</div>
 
 	<% @challenges.each do |challenge| %>

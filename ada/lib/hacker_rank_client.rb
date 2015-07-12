@@ -1,3 +1,4 @@
+require 'typhoeus'
 class HackerRankClient
   API_KEY = "hackerrank|258009-281|b2f5f21b0e34585da262983af2119a651bb26419"
   URL = "api.hackerrank.com/checker/submission.json"
